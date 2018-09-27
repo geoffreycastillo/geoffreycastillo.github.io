@@ -8,7 +8,72 @@
     <language>en-gb</language>
     <copyright>&amp;copy; 2018 Geoffrey Castillo</copyright>
     <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/home/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://geoffreycastillo.com/home/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>http://geoffreycastillo.com/home/about/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://geoffreycastillo.com/home/about/</guid>
+      <description>I am a senior researcher at the Department of Economics of the University of Vienna. I am also lab manager of theVienna Centre for Experimental Economics, along with Philipp Külpmann.
+You can access my full CV here.
+I have put together a list of resources that I have found helpful when starting in academia. If you know any other, please let me know.</description>
+    </item>
+    
+    <item>
+      <title>Working papers</title>
+      <link>http://geoffreycastillo.com/home/workingpapers/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://geoffreycastillo.com/home/workingpapers/</guid>
+      <description>Choice consistency and the attraction effect
+The attraction effect violates consistency requirements at the heart of rational choice, but despite its profound implications it has barely attracted attention in economics. I present a laboratory experiment aimed at testing the attraction effect and at disentangling some of its explanations using novel manipulations. I find the attraction effect and I also uncover a new &amp;lsquo;range effect&amp;rsquo; that runs against it. This range effect lends support to recent theories based on focusing and salience.</description>
+    </item>
+    
+    <item>
+      <title>In progress</title>
+      <link>http://geoffreycastillo.com/home/inprogress/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://geoffreycastillo.com/home/inprogress/</guid>
+      <description>On the ubiquity of social norms, with Lawrence Choo and Veronika Grimm
+Group dishonesty and collaborative evasion, with Lawrence Choo and Veronika Grimm
+Incorporating social distances in economic analysis, with Benjamin Beranek
+Explaining the effect of the take option in dictator games
+Decoy effects under ambiguity
+Examining the effect of probability format
+Experimental currency units and money illusion</description>
+    </item>
+    
+    <item>
+      <title>Recent Posts</title>
+      <link>http://geoffreycastillo.com/home/posts/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
+      
+      <guid>http://geoffreycastillo.com/home/posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Teaching</title>
+      <link>http://geoffreycastillo.com/home/teaching/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://geoffreycastillo.com/home/teaching/</guid>
+      <description>In the past I have been teaching microeconomics, mathematical economics and financial economics as a graduate teaching assistant. I am now teaching behavioural and experimental economics seminar modules. I am also supervising bachelor theses.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>http://geoffreycastillo.com/home/contact/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://geoffreycastillo.com/home/contact/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
