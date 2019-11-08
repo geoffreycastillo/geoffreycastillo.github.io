@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Geoffrey Castillo</title>
-    <link>https://homepage.univie.ac.at/geoffrey.castillo/post/</link>
+    <link>https://geoffreycastillo.com/post/</link>
     <description>Recent content in Posts on Geoffrey Castillo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 07 Nov 2019 15:34:47 +0100</lastBuildDate>
     
-	<atom:link href="https://homepage.univie.ac.at/geoffrey.castillo/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://geoffreycastillo.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Resources for the young economist</title>
-      <link>https://homepage.univie.ac.at/geoffrey.castillo/post/resources-young-economist/</link>
+      <link>https://geoffreycastillo.com/post/resources-young-economist/</link>
       <pubDate>Thu, 07 Nov 2019 15:34:47 +0100</pubDate>
       
-      <guid>https://homepage.univie.ac.at/geoffrey.castillo/post/resources-young-economist/</guid>
+      <guid>https://geoffreycastillo.com/post/resources-young-economist/</guid>
       <description>&lt;p&gt;There are many things that you are supposed to know when you start your academic career but that no one really explains.
 Thankfully, you can inform yourself on the Internet.&lt;/p&gt;</description>
     </item>
