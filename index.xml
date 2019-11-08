@@ -1,130 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Geoffrey Castillo on Geoffrey Castillo</title>
-    <link>http://geoffreycastillo.com/</link>
-    <description>Recent content in Geoffrey Castillo on Geoffrey Castillo</description>
+    <title>Geoffrey Castillo</title>
+    <link>https://homepage.univie.ac.at/geoffrey.castillo/</link>
+    <description>Recent content on Geoffrey Castillo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
-    <copyright>&amp;copy; 2018 Geoffrey Castillo</copyright>
-    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Thu, 07 Nov 2019 15:34:47 +0100</lastBuildDate>
+    
+	<atom:link href="https://homepage.univie.ac.at/geoffrey.castillo/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Resources for the young economist</title>
-      <link>http://geoffreycastillo.com/post/resources-young-economist/</link>
-      <pubDate>Tue, 03 Jul 2018 18:37:00 +0200</pubDate>
+      <link>https://homepage.univie.ac.at/geoffrey.castillo/post/resources-young-economist/</link>
+      <pubDate>Thu, 07 Nov 2019 15:34:47 +0100</pubDate>
       
-      <guid>http://geoffreycastillo.com/post/resources-young-economist/</guid>
+      <guid>https://homepage.univie.ac.at/geoffrey.castillo/post/resources-young-economist/</guid>
       <description>&lt;p&gt;There are many things that you are supposed to know when you start your academic career but that no one really explains.
-Thankfully, you can inform yourself on the Internet.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;(update 2018-07-03: added a few rankings and references following advice from Daniel Hamermesh)&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;how-to-write-economics&#34;&gt;How to write economics?&lt;/h2&gt;
-
-&lt;p&gt;There are two essential guides:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;John H. Cochrane&amp;rsquo;s &lt;a href=&#34;https://faculty.chicagobooth.edu/john.cochrane/research/papers/phd_paper_writing.pdf&#34; target=&#34;_blank&#34;&gt;&amp;lsquo;Writing tips for PhD. Students&amp;rsquo;&lt;/a&gt;. You will also find tips on how to do empirical work and how to present your research.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Deidre McCloskey&amp;rsquo;s &lt;a href=&#34;http://www.deirdremccloskey.com/docs/pdf/Article_86.pdf&#34; target=&#34;_blank&#34;&gt;great article in &lt;em&gt;Economic Inquiry&lt;/em&gt;&lt;/a&gt;. &lt;a href=&#34;https://www.amazon.com/Economical-Writing-Second-Deirdre-McCloskey/dp/1577660633&#34; target=&#34;_blank&#34;&gt;She turned it into a book&lt;/a&gt;, which got &lt;a href=&#34;http://www.deirdremccloskey.com/docs/pdf/Article_309.pdf&#34; target=&#34;_blank&#34;&gt;its own summary&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;There are also guides about non-fiction writing in general.
-I would consider these two essential as well:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.amazon.com/Elements-Style-William-Strunk-Jr/dp/194564401X&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;The Elements of Style&lt;/em&gt;&lt;/a&gt; by Strunk and White. Many of the tips presented in the guides above come from this book.
-A great little book to keep on your desk for quick reference.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.amazon.com/Writing-Well-30th-Anniversary-Edition/dp/0060891548/&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;On Writing Well&lt;/em&gt;&lt;/a&gt; by William Zinsser. Lots of small and big tips on how to write non-fiction properly.
-You will also learn how to write humour and how to conduct interviews.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;what-is-the-journal-ranking&#34;&gt;What is the journal ranking?&lt;/h2&gt;
-
-&lt;p&gt;Some rankings try to capture the feeling of the community, such as:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;The Keele list, &lt;a href=&#34;http://www.danielzizzo.com/keele.pdf&#34; target=&#34;_blank&#34;&gt;here hosted on Daniel Zizzo&amp;rsquo;s website&lt;/a&gt;. It also summarises other popular rankings, such as the &amp;lsquo;blue ribbon&amp;rsquo; journals and the Diamond list.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;The &lt;a href=&#34;https://www.handelsblatt.com/politik/deutschland/journal-ranking/9665428.html&#34; target=&#34;_blank&#34;&gt;Handelsblatt ranking&lt;/a&gt; &lt;a href=&#34;https://www.handelsblatt.com/downloads/9665428/1/journal-ranking.pdf&#34; target=&#34;_blank&#34;&gt;(here in pdf)&lt;/a&gt;. Probably the most simple of all.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Communities within each country also have their own ranking: &lt;a href=&#34;https://sites.google.com/site/section37cnrs/Home/revues37&#34; target=&#34;_blank&#34;&gt;the French CNRS ranking&lt;/a&gt; &lt;a href=&#34;https://docs.google.com/viewer?a=v&amp;amp;pid=sites&amp;amp;srcid=ZGVmYXVsdGRvbWFpbnxzZWN0aW9uMzdjbnJzfGd4OjQxNWMwZWI2YjNjZTRjOGE&#34; target=&#34;_blank&#34;&gt;(pdf)&lt;/a&gt;, &lt;a href=&#34;https://charteredabs.org/academic-journal-guide-2015-view/&#34; target=&#34;_blank&#34;&gt;the UK ABS ranking&lt;/a&gt;&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Other rankings are inferred from some data:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;The most famous is probably &lt;a href=&#34;https://ideas.repec.org/top/&#34; target=&#34;_blank&#34;&gt;RePEc/IDEAS&lt;/a&gt;. You can select between different flavours, for example &lt;a href=&#34;https://ideas.repec.org/top/top.journals.all10.html&#34; target=&#34;_blank&#34;&gt;the aggregate ranking for the past 10 years&lt;/a&gt;. But RePEc only counts papers from registered authors, which can bias the results.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;This paper uses citation count:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Kalaitzidakis, Pantelis, Theofanis P. Mamuneas, and Thanasis Stengos (2011) &amp;ldquo;An updated ranking of academic journals in economics.&amp;rdquo; &lt;em&gt;Canadian Journal of Economics/Revue canadienne d&amp;rsquo;économique&lt;/em&gt;, 44(4): 1525-1538, &lt;a href=&#34;https://doi.org/10.1111/j.1540-5982.2011.01683.x&#34; target=&#34;_blank&#34;&gt;doi:10.1111/j.1540-5982.2011.01683.x&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Arne Hole used data from the REF in the UK:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Hole, Arne Risa (2017) &amp;ldquo;Ranking economics journals using data from a national research evaluation exercise&amp;rdquo;, &lt;em&gt;Oxford Bulletin of Economics and Statistics&lt;/em&gt;, 79(5): 621-636, &lt;a href=&#34;https://doi.org/10.1111/obes.12185&#34; target=&#34;_blank&#34;&gt;doi:10.1111/obes.12185&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://scholar.google.com/citations?view_op=top_venues&amp;amp;hl=en&amp;amp;vq=bus_economics&#34; target=&#34;_blank&#34;&gt;Google Scholar also has its own ranking&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;Bonus&lt;/em&gt;: I have sent my paper to a journal, but how long will it take? The answer is always in the editors&amp;rsquo; report (for example, &lt;a href=&#34;https://www.econometricsociety.org/publications/econometrica/annual-reports&#34; target=&#34;_blank&#34;&gt;Econometrica&lt;/a&gt;, &lt;a href=&#34;https://www.aeaweb.org/articles?id=10.1257/aer.107.5.699&#34; target=&#34;_blank&#34;&gt;AER&lt;/a&gt;).&lt;/p&gt;
-
-&lt;h2 id=&#34;how-to-review-papers&#34;&gt;How to review papers?&lt;/h2&gt;
-
-&lt;p&gt;Two recent papers will tell you all you need to know:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Berk, Jonathan B., Campbell R. Harvey, and David Hirshleifer (2017) &amp;ldquo;How to Write an Effective Referee Report and Improve the Scientific Review Process.&amp;rdquo; &lt;em&gt;Journal of Economic Perspectives&lt;/em&gt;, 31(1): 231-44, &lt;a href=&#34;http://doi.org/10.1257/jep.31.1.231&#34; target=&#34;_blank&#34;&gt;doi:10.1257/jep.31.1.231&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Berk, Jonathan B., Campbell R. Harvey, and David Hirshleifer (2016) &amp;ldquo;Preparing a Referee Report: Guidelines and Perspectives&amp;rdquo;, SSRN working paper, &lt;a href=&#34;http://dx.doi.org/10.2139/ssrn.2547191&#34; target=&#34;_blank&#34;&gt;doi:10.2139/ssrn.2547191&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2887708&#34; target=&#34;_blank&#34;&gt;They even made a checklist&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;how-to-navigate-the-job-market&#34;&gt;How to navigate the job market?&lt;/h2&gt;
-
-&lt;p&gt;The most famous guide is &lt;a href=&#34;https://www.aeaweb.org/content/file?id=869&#34; target=&#34;_blank&#34;&gt;John Cawley&amp;rsquo;s&lt;/a&gt;, here in its 2016-2017 edition.
-Take note of the title, however: &amp;lsquo;A Guide and Advice for Economists on the &lt;strong&gt;U.S.&lt;/strong&gt; Junior Academic Job Market&amp;rsquo;.
-Things are slightly different in Europe, such as the timing and where you find the postings.
-Still, this is a great starting point.&lt;/p&gt;
-
-&lt;p&gt;Tips abound elsewhere.
-I particularly enjoyed &lt;a href=&#34;https://drive.google.com/file/d/0B4gn459Mbb0-YWpoMkJ4SUFkUDA/view&#34; target=&#34;_blank&#34;&gt;Claudia Steinwender&amp;rsquo;s &amp;lsquo;Insights on the job market&amp;rsquo;&lt;/a&gt; and &lt;a href=&#34;https://economics.harvard.edu/pages/job-market-information&#34; target=&#34;_blank&#34;&gt;this webpage by the Department of Economics at Harvard&lt;/a&gt; (see for example &lt;a href=&#34;http://economics.harvard.edu/files/economics/files/david_laibson_tips_0.pdf&#34; target=&#34;_blank&#34;&gt;David Laibson&amp;rsquo;s tips&lt;/a&gt; and the FAQs &lt;a href=&#34;https://economics.harvard.edu/files/economics/files/memo_1_aug_2013.pdf&#34; target=&#34;_blank&#34;&gt;#1&lt;/a&gt;, &lt;a href=&#34;https://economics.harvard.edu/files/economics/files/memo_2_sept_2014.pdf&#34; target=&#34;_blank&#34;&gt;#2&lt;/a&gt;, &lt;a href=&#34;https://economics.harvard.edu/files/economics/files/memo_3_oct_2015.pdf&#34; target=&#34;_blank&#34;&gt;#3&lt;/a&gt;, &lt;a href=&#34;https://economics.harvard.edu/files/economics/files/memo_4_nov_2013.pdf&#34; target=&#34;_blank&#34;&gt;#4&lt;/a&gt;).
-&lt;a href=&#34;https://sites.google.com/site/pfeiferecon/job-market-resources&#34; target=&#34;_blank&#34;&gt;Johannes Pfeifer&amp;rsquo;s website lists many more&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;professional-etiquette-and-miscellaneous&#34;&gt;Professional etiquette and miscellaneous&lt;/h2&gt;
-
-&lt;p&gt;Daniel Hamermesh wrote great articles about the economic profession.
-This one is a classic:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Hamermesh, Daniel S. (1992) &amp;ldquo;The young economist&amp;rsquo;s guide to professional etiquette.&amp;rdquo; &lt;em&gt;Journal of Economic Perspectives&lt;/em&gt;, 6(1): 169-179, &lt;a href=&#34;http://dx.doi.org/10.1257/jep.6.1.169&#34; target=&#34;_blank&#34;&gt;doi:10.1257/jep.6.1.169&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;It is a little bit outdated (&amp;ldquo;Nearly all journals send an acknowledging postcard when your paper is received&amp;rdquo;) but still contains solid advice.&lt;/p&gt;
-
-&lt;p&gt;Daniel Hamermesh published two other papers in the same vein:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Hamermesh, Daniel S. (1994) &amp;ldquo;Facts and Myths about Refereeing.&amp;rdquo; &lt;em&gt;Journal of Economic Perspectives&lt;/em&gt;, 8(1): 153-163, &lt;a href=&#34;http://dx.doi.org/10.1257/jep.8.1.153&#34; target=&#34;_blank&#34;&gt;doi:10.1257/jep.8.1.153&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Hamermesh, Daniel S. (2018) &amp;ldquo;Citations In Economics: Measurement, Uses, and Impacts.&amp;rdquo; &lt;em&gt;Journal of Economic Literature&lt;/em&gt;, 56(1): 115-156, &lt;a href=&#34;http://dx.doi.org/10.1257/jel.20161326&#34; target=&#34;_blank&#34;&gt;doi:10.1257/jel.20161326&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;If you want to dig deeper in economic writing, Deidre McCloskey has another great article on the rhetoric of economics:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;McCloskey, Deidre (1983) &amp;ldquo;The Rhetoric of Economics.&amp;rdquo; &lt;em&gt;Journal of Economic Literature&lt;/em&gt;, 21(2): 481-517, &lt;a href=&#34;http://www.jstor.org/stable/2724987&#34; target=&#34;_blank&#34;&gt;JSTOR link&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+Thankfully, you can inform yourself on the Internet.&lt;/p&gt;</description>
     </item>
     
   </channel>
