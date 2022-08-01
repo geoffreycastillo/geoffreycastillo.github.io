@@ -14,10 +14,8 @@
 <body>
     <div class="col-xl-6 col-lg-8 col-md-10 mx-auto p-3 py-md-5"><main>
             <div id="content">
-
 <div class="header mb-5">
-    <h1><code>bingo-blower.js</code> demo</h1>
-
+    <h1><code>Bingo-Blower.js</code> Demo</h1>
     <a href="https://geoffreycastillo.com" title="Home" class="page_meta">Return Home</a>
 </div>
 
@@ -69,21 +67,9 @@
     <script src="https://cdn.jsdelivr.net/gh/geoffreycastillo/bingo-blower-js/bingo-blower.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/matter-js@0.18.0/build/matter.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/matter-attractors@0.1.6/build/matter-attractors.min.js"></script>
-<script>
-    let blower = new BingoBlower();
-    blower.addBalls([1, 2, 3]);
-    document.getElementById('draw').addEventListener('click',
-        async () => {
-            const draw = await blower.drawBall();
-            document.getElementById('result').innerHTML = draw.colourHuman;
-        }
-    );
-    document.getElementById('reset').addEventListener('click',
-        () => {
-            blower.reset()
-        }
-    );
-</script>
+    
+        <script> let blower = new BingoBlower(); blower.addBalls([1, 2, 3]); document.getElementById('draw').addEventListener('click', async () => { const draw = await blower.drawBall(); document.getElementById('result').innerHTML = draw.colourHuman; } ); document.getElementById('reset').addEventListener('click', () => { blower.reset() } ); </script>
+    
 
 </body>
 
