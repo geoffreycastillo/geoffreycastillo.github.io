@@ -32,7 +32,7 @@
     </div>
 </div>
 <div class="text-center">
-    <canvas class="text-center" id="world" height="500px"></canvas>
+    <canvas class="blower text-center" id="world" height="500px"></canvas>
 </div>
 <p class="text-center">
     The ball drawn is: <span id="result"></span>
@@ -40,11 +40,11 @@
 <p>HTML:</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">button</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;draw&#34;</span><span style="color:#111">&gt;</span>Draw a ball<span style="color:#111">&lt;/</span><span style="color:#f92672">button</span><span style="color:#111">&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">button</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;reset&#34;</span><span style="color:#111">&gt;</span>Reset the Blower<span style="color:#111">&lt;/</span><span style="color:#f92672">button</span><span style="color:#111">&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">canvas</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;world&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">canvas</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">canvas</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;blower&#34;</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;world&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">canvas</span><span style="color:#111">&gt;</span>
 </span></span><span style="display:flex;"><span>The ball drawn is: <span style="color:#111">&lt;</span><span style="color:#f92672">span</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;result&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">span</span><span style="color:#111">&gt;</span>
 </span></span></code></pre></div><p>JS:</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#00a8c8">let</span> <span style="color:#75af00">blower</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#75af00">BingoBlower</span><span style="color:#111">();</span>
-</span></span><span style="display:flex;"><span><span style="color:#75af00">blower</span><span style="color:#111">.</span><span style="color:#75af00">addBalls</span><span style="color:#111">([</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span> <span style="color:#ae81ff">2</span><span style="color:#111">,</span> <span style="color:#ae81ff">3</span><span style="color:#111">]);</span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">blower</span><span style="color:#111">.</span><span style="color:#75af00">addBalls</span><span style="color:#111">([</span><span style="color:#ae81ff">18</span><span style="color:#111">,</span> <span style="color:#ae81ff">6</span><span style="color:#111">,</span> <span style="color:#ae81ff">3</span><span style="color:#111">]);</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">getElementById</span><span style="color:#111">(</span><span style="color:#d88200">&#39;draw&#39;</span><span style="color:#111">).</span><span style="color:#75af00">addEventListener</span><span style="color:#111">(</span><span style="color:#d88200">&#39;click&#39;</span><span style="color:#111">,</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">async</span> <span style="color:#111">()</span> <span style="color:#111">=&gt;</span> <span style="color:#111">{</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">const</span> <span style="color:#75af00">draw</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">await</span> <span style="color:#75af00">blower</span><span style="color:#111">.</span><span style="color:#75af00">drawBall</span><span style="color:#111">();</span>
@@ -53,7 +53,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#111">);</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">getElementById</span><span style="color:#111">(</span><span style="color:#d88200">&#39;reset&#39;</span><span style="color:#111">).</span><span style="color:#75af00">addEventListener</span><span style="color:#111">(</span><span style="color:#d88200">&#39;click&#39;</span><span style="color:#111">,</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#111">()</span> <span style="color:#111">=&gt;</span> <span style="color:#111">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75af00">blower</span><span style="color:#111">.</span><span style="color:#75af00">reset</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75af00">blower</span><span style="color:#111">.</span><span style="color:#75af00">reset</span><span style="color:#111">();</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">);</span>
 </span></span></code></pre></div>
@@ -68,7 +68,7 @@
     <script src="https://cdn.jsdelivr.net/npm/matter-js@0.18.0/build/matter.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/matter-attractors@0.1.6/build/matter-attractors.min.js"></script>
     
-        <script> let blower = new BingoBlower(); blower.addBalls([1, 2, 3]); document.getElementById('draw').addEventListener('click', async () => { const draw = await blower.drawBall(); document.getElementById('result').innerHTML = draw.colourHuman; } ); document.getElementById('reset').addEventListener('click', () => { blower.reset() } ); </script>
+        <script> let blower = new BingoBlower(); blower.addBalls([18, 6, 3]); document.getElementById('draw').addEventListener('click', async () => { const draw = await blower.drawBall(); document.getElementById('result').innerHTML = draw.colourHuman; } ); document.getElementById('reset').addEventListener('click', () => { blower.reset(); } ); </script>
     
 
 </body>
