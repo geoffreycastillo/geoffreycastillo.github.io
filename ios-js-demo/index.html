@@ -21,7 +21,7 @@
 
 <div>
     <p><code>ios.js</code> is available on <a href="https://github.com/geoffreycastillo/ios-js">GitHub</a>.</p>
-<h1 id="continuous-ios">Continuous IOS</h1>
+<h1 id="continuous-ios-scale">Continuous IOS scale</h1>
 <div id="ios-continuous"></div>
 <p>
     Proportion overlap: <span id="continuous-ios-overlap"></span>
@@ -51,7 +51,7 @@
 </span></span><span style="display:flex;"><span>            <span style="color:#00a8c8">false</span><span style="color:#111">)</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#111">},</span> <span style="color:#00a8c8">false</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">);</span>
-</span></span></code></pre></div><h1 id="step-choice-ios">Step-Choice IOS</h1>
+</span></span></code></pre></div><h1 id="step-choice-ios-scale-with-10-circles">Step-Choice IOS scale with 10 circles</h1>
 <div id="ios-step-choice"></div>
 <p>
     IOS score: <span id="step-ios-score"></span>
@@ -92,7 +92,48 @@
 </span></span><span style="display:flex;"><span>            <span style="color:#00a8c8">false</span><span style="color:#111">)</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#111">},</span> <span style="color:#00a8c8">false</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">);</span>
-</span></span></code></pre></div><h1 id="original-ios">Original IOS</h1>
+</span></span></code></pre></div><h1 id="unbalanced-step-choice-ios-scale">Unbalanced Step-Choice IOS scale</h1>
+<div id="ios-step-choice-unbalanced"></div>
+<p>
+    IOS score: <span id="step-ios-unbalanced-score"></span>
+</p>
+<p>
+    Proportion overlap: <span id="step-ios-unbalanced-overlap"></span>
+</p>
+<p>
+    Proportion distance: <span id="step-ios-unbalanced-distance"></span>
+</p>
+<p>HTML:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;ios-step-choice-unbalanced&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>IOS score: <span style="color:#111">&lt;</span><span style="color:#f92672">span</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;step-ios-unbalanced-score&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">span</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>Proportion overlap: <span style="color:#111">&lt;</span><span style="color:#f92672">span</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;step-ios-unbalanced-overlap&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">span</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>Proportion distance: <span style="color:#111">&lt;</span><span style="color:#f92672">span</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;step-ios-unbalanced-distance&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">span</span><span style="color:#111">&gt;</span>
+</span></span></code></pre></div><p>JS:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#00a8c8">const</span> <span style="color:#75af00">iosStepChoiceUnbalanced</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#75af00">Ios</span><span style="color:#111">({</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75af00">el</span><span style="color:#f92672">:</span> <span style="color:#d88200">&#39;ios-step-choice-unbalanced&#39;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75af00">type</span><span style="color:#f92672">:</span> <span style="color:#d88200">&#39;step-choice&#39;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75af00">unbalanced</span><span style="color:#f92672">:</span> <span style="color:#00a8c8">true</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75af00">buttonsClass</span><span style="color:#f92672">:</span> <span style="color:#d88200">&#39;btn btn-outline-secondary&#39;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">});</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">const</span> <span style="color:#75af00">step_choice_ios_unbalnced_distance_input</span> <span style="color:#f92672">=</span> <span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">getElementById</span><span style="color:#111">(</span><span style="color:#d88200">&#39;step-ios-unbalanced-distance&#39;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">const</span> <span style="color:#75af00">step_choice_ios_unbalnced_overlap_input</span> <span style="color:#f92672">=</span> <span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">getElementById</span><span style="color:#111">(</span><span style="color:#d88200">&#39;step-ios-unbalanced-overlap&#39;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">const</span> <span style="color:#75af00">step_choice_ios_unbalnced_score_input</span> <span style="color:#f92672">=</span> <span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">getElementById</span><span style="color:#111">(</span><span style="color:#d88200">&#39;step-ios-unbalanced-score&#39;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">getElementById</span><span style="color:#111">(</span><span style="color:#d88200">&#39;ios-step-choice-unbalanced&#39;</span><span style="color:#111">).</span><span style="color:#75af00">addEventListener</span><span style="color:#111">(</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#d88200">&#39;mousedown&#39;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">()</span> <span style="color:#111">=&gt;</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">window</span><span style="color:#111">.</span><span style="color:#75af00">addEventListener</span><span style="color:#111">(</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#d88200">&#39;mouseup&#39;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">()</span> <span style="color:#111">=&gt;</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75af00">step_choice_ios_unbalnced_distance_input</span><span style="color:#111">.</span><span style="color:#75af00">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#75af00">iosStepChoiceUnbalanced</span><span style="color:#111">.</span><span style="color:#75af00">proportionDistance</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75af00">step_choice_ios_unbalnced_overlap_input</span><span style="color:#111">.</span><span style="color:#75af00">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#75af00">iosStepChoiceUnbalanced</span><span style="color:#111">.</span><span style="color:#75af00">proportionOverlap</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75af00">step_choice_ios_unbalnced_score_input</span><span style="color:#111">.</span><span style="color:#75af00">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#75af00">iosStepChoiceUnbalanced</span><span style="color:#111">.</span><span style="color:#75af00">currentCircle</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">},</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#00a8c8">false</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">},</span> <span style="color:#00a8c8">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">);</span>
+</span></span></code></pre></div><h1 id="original-ios-scale">Original IOS scale</h1>
 <div id="ios-original"></div>
 <p>
     IOS score: <span id="original-ios-score"></span>
@@ -142,7 +183,7 @@
 </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/interactjs@1.10.17/dist/interact.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/geoffreycastillo/ios-js@0.1.0/ios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/geoffreycastillo/ios-js@0.2.1/ios.min.js"></script>
     
         <script> const iosOriginal = new Ios({ el: 'ios-original', type: 'original', buttonsClass: 'btn btn-outline-secondary', direction: 'row' });
 const original_ios_distance_input = document.getElementById('original-ios-distance'); const original_ios_overlap_input = document.getElementById('original-ios-overlap'); const original_ios_score_input = document.getElementById('original-ios-score');
@@ -152,6 +193,10 @@ const iosStepChoice = new Ios({ el: 'ios-step-choice', type: 'step-choice', numb
 const step_choice_ios_distance_input = document.getElementById('step-ios-distance'); const step_choice_ios_overlap_input = document.getElementById('step-ios-overlap'); const step_choice_ios_score_input = document.getElementById('step-ios-score');
 
 document.getElementById('ios-step-choice').addEventListener( 'mousedown', () => { window.addEventListener( 'mouseup', () => { step_choice_ios_distance_input.innerHTML = iosStepChoice.proportionDistance; step_choice_ios_overlap_input.innerHTML = iosStepChoice.proportionOverlap; step_choice_ios_score_input.innerHTML = iosStepChoice.currentCircle; }, false) }, false );
+const iosStepChoiceUnbalanced = new Ios({ el: 'ios-step-choice-unbalanced', type: 'step-choice', unbalanced: true, buttonsClass: 'btn btn-outline-secondary', });
+
+const step_choice_ios_unbalnced_distance_input = document.getElementById('step-ios-unbalanced-distance'); const step_choice_ios_unbalnced_overlap_input = document.getElementById('step-ios-unbalanced-overlap'); const step_choice_ios_unbalnced_score_input = document.getElementById('step-ios-unbalanced-score');
+document.getElementById('ios-step-choice-unbalanced').addEventListener( 'mousedown', () => { window.addEventListener( 'mouseup', () => { step_choice_ios_unbalnced_distance_input.innerHTML = iosStepChoiceUnbalanced.proportionDistance; step_choice_ios_unbalnced_overlap_input.innerHTML = iosStepChoiceUnbalanced.proportionOverlap; step_choice_ios_unbalnced_score_input.innerHTML = iosStepChoiceUnbalanced.currentCircle; }, false) }, false );
 const iosContinuous = new Ios({ el: 'ios-continuous', });
 const continuous_ios_distance_input = document.getElementById('continuous-ios-distance'); const continuous_ios_overlap_input = document.getElementById('continuous-ios-overlap');
 document.getElementById('ios-continuous').addEventListener( 'mousedown', () => { window.addEventListener( 'mouseup', () => { continuous_ios_distance_input.innerHTML = iosContinuous.proportionDistance; continuous_ios_overlap_input.innerHTML = iosContinuous.proportionOverlap; }, false) }, false ); </script>
