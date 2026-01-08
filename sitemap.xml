@@ -2,11 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://geoffreycastillo.com/bingo-blower-js-demo/</loc>
-    <lastmod>2022-07-12T00:00:00+00:00</lastmod>
+    <loc>https://geoffreycastillo.com/ios-js-demo/</loc>
+    <lastmod>2025-09-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://geoffreycastillo.com/</loc>
-    <lastmod>2022-07-12T00:00:00+00:00</lastmod>
+    <lastmod>2025-09-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://geoffreycastillo.com/bingo-blower-js-demo/</loc>
+    <lastmod>2022-10-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://geoffreycastillo.com/mturk/</loc>
     <lastmod>2021-04-07T00:00:00+00:00</lastmod>
@@ -17,6 +20,6 @@
     <loc>https://geoffreycastillo.com/post/resources-young-economist/</loc>
     <lastmod>2020-05-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://geoffreycastillo.com/ios-js-demo/</loc>
+    <loc>https://geoffreycastillo.com/lottery-representation-js-demo/</loc>
   </url>
 </urlset>
