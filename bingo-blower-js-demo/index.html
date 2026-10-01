@@ -20,58 +20,185 @@
 </div>
 
 <div>
-    <p><code>bingo-blower.js</code> is available on <a href="https://github.com/geoffreycastillo/bingo-blower-js">GitHub</a>.</p>
-<div class="container my-4">
-    <div class="row justify-content-around">
-        <div class="col-auto">
+    <p><code>bingo-blower.js</code> is available on <a href="https://github.com/geoffreycastillo/bingo-blower-js">GitHub</a>.
+See the <a href="https://github.com/geoffreycastillo/bingo-blower-js#readme">README</a> for installation and documentation.</p>
+<div class="row my-4 g-4">
+    <div class="col-lg-auto text-center">
+        <canvas id="world"></canvas>
+    </div>
+    <div class="col-lg">
+        <div class="d-flex flex-wrap gap-2 mb-2">
             <button type="button" id="draw" class="btn btn-primary">Draw a ball</button>
+            <button type="button" id="reset" class="btn btn-primary">Reset the blower</button>
         </div>
-        <div class="col-auto">
-            <button type="button" id="reset" class="btn btn-primary">Reset the Blower</button>
+        <div class="d-flex flex-wrap gap-2 mb-3">
+            <button type="button" id="mouse-on" class="btn btn-outline-secondary">Mouse control on</button>
+            <button type="button" id="mouse-off" class="btn btn-outline-secondary">Mouse control off</button>
         </div>
+        <p>The ball drawn is: <span id="result" class="fw-bold"></span></p>
+        <h2 class="h5 mt-4">Balls</h2>
+        <table class="table table-sm align-middle w-auto">
+            <tr>
+                <td>Red</td>
+                <td><span class="count" data-colour="Red"></span></td>
+                <td><button type="button" class="add btn btn-sm btn-outline-secondary" data-colour="Red">+1</button></td>
+                <td><button type="button" class="remove btn btn-sm btn-outline-secondary" data-colour="Red">-1</button></td>
+            </tr>
+            <tr>
+                <td>MediumBlue</td>
+                <td><span class="count" data-colour="MediumBlue"></span></td>
+                <td><button type="button" class="add btn btn-sm btn-outline-secondary" data-colour="MediumBlue">+1</button></td>
+                <td><button type="button" class="remove btn btn-sm btn-outline-secondary" data-colour="MediumBlue">-1</button></td>
+            </tr>
+            <tr>
+                <td>Gold</td>
+                <td><span class="count" data-colour="Gold"></span></td>
+                <td><button type="button" class="add btn btn-sm btn-outline-secondary" data-colour="Gold">+1</button></td>
+                <td><button type="button" class="remove btn btn-sm btn-outline-secondary" data-colour="Gold">-1</button></td>
+            </tr>
+            <tr>
+                <td>LimeGreen</td>
+                <td><span class="count" data-colour="LimeGreen"></span></td>
+                <td><button type="button" class="add btn btn-sm btn-outline-secondary" data-colour="LimeGreen">+1</button></td>
+                <td><button type="button" class="remove btn btn-sm btn-outline-secondary" data-colour="LimeGreen">-1</button></td>
+            </tr>
+            <tr>
+                <td>Sienna</td>
+                <td><span class="count" data-colour="Sienna"></span></td>
+                <td><button type="button" class="add btn btn-sm btn-outline-secondary" data-colour="Sienna">+1</button></td>
+                <td><button type="button" class="remove btn btn-sm btn-outline-secondary" data-colour="Sienna">-1</button></td>
+            </tr>
+        </table>
     </div>
 </div>
-<div class="text-center">
-    <canvas class="blower text-center" id="world" height="500px"></canvas>
-</div>
-<p class="text-center">
-    The ball drawn is: <span id="result"></span>
-</p>
+<h1 id="blower-options">Blower options</h1>
+<p>The values shown on load are the default values.</p>
+<form id="options" class="row g-3 mb-5">
+    <div class="col-sm-6 col-md-4">
+        <label for="option-width" class="form-label">width</label>
+        <input type="number" step="any" id="option-width" name="width" value="500" class="form-control form-control-sm">
+        <div class="form-text">Width and height of the blower, which is a square, in pixels</div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <label for="option-wallWidth" class="form-label">wallWidth</label>
+        <input type="number" step="any" id="option-wallWidth" name="wallWidth" value="60" class="form-control form-control-sm">
+        <div class="form-text">Thickness of the walls of the blower, in pixels</div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <label for="option-ballSize" class="form-label">ballSize</label>
+        <input type="number" step="any" id="option-ballSize" name="ballSize" value="10" class="form-control form-control-sm">
+        <div class="form-text">Radius of the balls, in pixels</div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <label for="option-density" class="form-label">density</label>
+        <input type="number" step="any" id="option-density" name="density" value="0.004" class="form-control form-control-sm">
+        <div class="form-text">Denser balls are heavier and need a stronger windForce</div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <label for="option-friction" class="form-label">friction</label>
+        <input type="number" step="any" id="option-friction" name="friction" value="0.02" class="form-control form-control-sm">
+        <div class="form-text">How much the balls slow down when they slide against each other or the walls</div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <label for="option-frictionAir" class="form-label">frictionAir</label>
+        <input type="number" step="any" id="option-frictionAir" name="frictionAir" value="0.001" class="form-control form-control-sm">
+        <div class="form-text">Air resistance: how much the balls slow down as they move</div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <label for="option-frictionStatic" class="form-label">frictionStatic</label>
+        <input type="number" step="any" id="option-frictionStatic" name="frictionStatic" value="0.001" class="form-control form-control-sm">
+        <div class="form-text">How much force it takes to move a ball at rest</div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <label for="option-restitution" class="form-label">restitution</label>
+        <input type="number" step="any" id="option-restitution" name="restitution" value="0.7" class="form-control form-control-sm">
+        <div class="form-text">Bounciness of the balls</div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <label for="option-windForce" class="form-label">windForce</label>
+        <input type="number" step="any" id="option-windForce" name="windForce" value="0.0009" class="form-control form-control-sm">
+        <div class="form-text">How strongly the air blows from the bottom of the blower</div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <label for="option-targetColour" class="form-label">targetColour</label>
+        <input type="text" id="option-targetColour" name="targetColour" value="LightGray" class="form-control form-control-sm">
+        <div class="form-text">Colour of the target, the cross that appears in the middle when a ball is drawn</div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <label for="option-targetWidth" class="form-label">targetWidth</label>
+        <input type="number" step="any" id="option-targetWidth" name="targetWidth" value="50" class="form-control form-control-sm">
+        <div class="form-text">Length of each bar of the target cross</div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <label for="option-targetThickness" class="form-label">targetThickness</label>
+        <input type="number" step="any" id="option-targetThickness" name="targetThickness" value="10" class="form-control form-control-sm">
+        <div class="form-text">Thickness of each bar of the target cross</div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <label for="option-drawnBallHighlight" class="form-label">drawnBallHighlight</label>
+        <input type="text" id="option-drawnBallHighlight" name="drawnBallHighlight" value="Black" class="form-control form-control-sm">
+        <div class="form-text">Colour of the circle around the ball drawn</div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <label for="option-drawnBallThickness" class="form-label">drawnBallThickness</label>
+        <input type="number" step="any" id="option-drawnBallThickness" name="drawnBallThickness" value="10" class="form-control form-control-sm">
+        <div class="form-text">Thickness of the circle around the ball drawn</div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <label for="option-timeSeconds" class="form-label">timeSeconds</label>
+        <input type="number" step="any" id="option-timeSeconds" name="timeSeconds" value="3" class="form-control form-control-sm">
+        <div class="form-text">How long the balls keep moving after the target appears, before the ball closest to it is drawn</div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <label for="option-revealSeconds" class="form-label">revealSeconds</label>
+        <input type="number" step="any" id="option-revealSeconds" name="revealSeconds" value="0" class="form-control form-control-sm">
+        <div class="form-text">How long the blower takes to go from blurry to sharp (0 for no blur)</div>
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Rebuild the blower</button>
+        <button type="button" id="defaults" class="btn btn-outline-secondary">Reset to default values</button>
+    </div>
+</form>
+<h1 id="minimal-example">Minimal example</h1>
 <p>HTML:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">button</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;draw&#34;</span><span style="color:#111">&gt;</span>Draw a ball<span style="color:#111">&lt;/</span><span style="color:#f92672">button</span><span style="color:#111">&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">button</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;reset&#34;</span><span style="color:#111">&gt;</span>Reset the Blower<span style="color:#111">&lt;/</span><span style="color:#f92672">button</span><span style="color:#111">&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">canvas</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;blower&#34;</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;world&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">canvas</span><span style="color:#111">&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">canvas</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;world&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">canvas</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">button</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;draw&#34;</span><span style="color:#111">&gt;</span>Draw a ball<span style="color:#111">&lt;/</span><span style="color:#f92672">button</span><span style="color:#111">&gt;</span>
 </span></span><span style="display:flex;"><span>The ball drawn is: <span style="color:#111">&lt;</span><span style="color:#f92672">span</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;result&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">span</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">script</span> <span style="color:#75af00">src</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;https://cdn.jsdelivr.net/npm/matter-js@0.20.0/build/matter.min.js&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">script</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">script</span> <span style="color:#75af00">src</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;https://cdn.jsdelivr.net/gh/geoffreycastillo/bingo-blower-js@v1.1.0/bingo-blower.min.js&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">script</span><span style="color:#111">&gt;</span>
 </span></span></code></pre></div><p>JS:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#00a8c8">let</span> <span style="color:#75af00">blower</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#75af00">BingoBlower</span><span style="color:#111">();</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#00a8c8">const</span> <span style="color:#75af00">blower</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#75af00">BingoBlower</span><span style="color:#111">();</span>
 </span></span><span style="display:flex;"><span><span style="color:#75af00">blower</span><span style="color:#111">.</span><span style="color:#75af00">addBalls</span><span style="color:#111">([</span><span style="color:#ae81ff">18</span><span style="color:#111">,</span> <span style="color:#ae81ff">6</span><span style="color:#111">,</span> <span style="color:#ae81ff">3</span><span style="color:#111">]);</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">getElementById</span><span style="color:#111">(</span><span style="color:#d88200">&#39;draw&#39;</span><span style="color:#111">).</span><span style="color:#75af00">addEventListener</span><span style="color:#111">(</span><span style="color:#d88200">&#39;click&#39;</span><span style="color:#111">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">async</span> <span style="color:#111">()</span> <span style="color:#111">=&gt;</span> <span style="color:#111">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">const</span> <span style="color:#75af00">draw</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">await</span> <span style="color:#75af00">blower</span><span style="color:#111">.</span><span style="color:#75af00">drawBall</span><span style="color:#111">();</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">getElementById</span><span style="color:#111">(</span><span style="color:#d88200">&#39;result&#39;</span><span style="color:#111">).</span><span style="color:#75af00">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#75af00">draw</span><span style="color:#111">.</span><span style="color:#75af00">colourHuman</span><span style="color:#111">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">getElementById</span><span style="color:#111">(</span><span style="color:#d88200">&#39;reset&#39;</span><span style="color:#111">).</span><span style="color:#75af00">addEventListener</span><span style="color:#111">(</span><span style="color:#d88200">&#39;click&#39;</span><span style="color:#111">,</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#111">()</span> <span style="color:#111">=&gt;</span> <span style="color:#111">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75af00">blower</span><span style="color:#111">.</span><span style="color:#75af00">reset</span><span style="color:#111">();</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">getElementById</span><span style="color:#111">(</span><span style="color:#d88200">&#39;draw&#39;</span><span style="color:#111">).</span><span style="color:#75af00">addEventListener</span><span style="color:#111">(</span><span style="color:#d88200">&#39;click&#39;</span><span style="color:#111">,</span> <span style="color:#00a8c8">async</span> <span style="color:#111">()</span> <span style="color:#111">=&gt;</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">const</span> <span style="color:#75af00">draw</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">await</span> <span style="color:#75af00">blower</span><span style="color:#111">.</span><span style="color:#75af00">drawBall</span><span style="color:#111">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">getElementById</span><span style="color:#111">(</span><span style="color:#d88200">&#39;result&#39;</span><span style="color:#111">).</span><span style="color:#75af00">textContent</span> <span style="color:#f92672">=</span> <span style="color:#75af00">draw</span><span style="color:#111">.</span><span style="color:#75af00">label</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">});</span>
 </span></span></code></pre></div>
 </div>
 
             </div>
         </main><footer class="pt-5 my-5 text-muted border-top">
-    Last update: 07/10/2022.
+    Last update: 01/10/2026.
     Built with <a href="https://gohugo.io">Hugo</a>,
     hosted on <a href="https://pages.github.com/">GitHub Pages</a>.
 </footer>
 
     </div>
-    <script src="https://cdn.jsdelivr.net/gh/geoffreycastillo/bingo-blower-js/bingo-blower.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/matter-js@0.18.0/build/matter.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/matter-attractors@0.1.6/build/matter-attractors.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/matter-js@0.20.0/build/matter.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/geoffreycastillo/bingo-blower-js@v1.1.0/bingo-blower.min.js"></script>
     
-        <script> let blower = new BingoBlower(); blower.addBalls([18, 6, 3]); document.getElementById('draw').addEventListener('click', async () => { const draw = await blower.drawBall(); document.getElementById('result').innerHTML = draw.colourHuman; } ); document.getElementById('reset').addEventListener('click', () => { blower.reset(); } ); </script>
+        <script> function readOptions() { const options = {}; for (const input of document.querySelectorAll('#options input')) { options[input.name] = input.type === 'number' ? Number(input.value) : input.value; } return options; }
+function showCounts() { for (const span of document.querySelectorAll('.count')) { const entry = blower.balls.find(count => count.colour === span.dataset.colour); span.textContent = entry ? entry.count : 0; } }
+function rebuildBlower(event) { event.preventDefault(); const ballCounts = blower.balls; blower.destroy(); blower = new BingoBlower(readOptions()); blower.addBalls(ballCounts.map(count => count.count), ballCounts.map(count => count.colour)); document.getElementById('result').textContent = ''; showCounts(); }
+let blower = new BingoBlower(readOptions()); blower.addBalls([18, 6, 3]); showCounts();
+document.getElementById('draw').addEventListener('click', async () => { const draw = await blower.drawBall(); if (draw) { document.getElementById('result').textContent = draw.label; } });
+document.getElementById('reset').addEventListener('click', () => { blower.reset(); document.getElementById('result').textContent = ''; });
+document.getElementById('mouse-on').addEventListener('click', () => blower.addMouseControl()); document.getElementById('mouse-off').addEventListener('click', () => blower.removeMouseControl());
+for (const button of document.querySelectorAll('.add')) { button.addEventListener('click', () => { blower.addBalls([1], [button.dataset.colour]); showCounts(); }); }
+for (const button of document.querySelectorAll('.remove')) { button.addEventListener('click', () => { blower.removeBalls([1], [button.dataset.colour]); showCounts(); }); }
+document.getElementById('options').addEventListener('submit', rebuildBlower);
+document.getElementById('defaults').addEventListener('click', event => { document.getElementById('options').reset(); rebuildBlower(event); }); </script>
     
 
 </body>
