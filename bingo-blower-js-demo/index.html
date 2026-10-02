@@ -77,17 +77,17 @@ See the <a href="https://github.com/geoffreycastillo/bingo-blower-js#readme">REA
     <div class="col-sm-6 col-md-4">
         <label for="option-width" class="form-label">width</label>
         <input type="number" step="any" id="option-width" name="width" value="500" class="form-control form-control-sm">
-        <div class="form-text">Width and height of the blower, which is a square, in pixels</div>
+        <div class="form-text">Width and height of the blower, which is a square, in pixels. Everything else scales with it</div>
     </div>
     <div class="col-sm-6 col-md-4">
         <label for="option-wallWidth" class="form-label">wallWidth</label>
-        <input type="number" step="any" id="option-wallWidth" name="wallWidth" value="60" class="form-control form-control-sm">
-        <div class="form-text">Thickness of the walls of the blower, in pixels</div>
+        <input type="number" step="any" min="0" max="1" id="option-wallWidth" name="wallWidth" value="0.12" class="form-control form-control-sm">
+        <div class="form-text">Thickness of the walls of the blower, as a fraction of the blower's width</div>
     </div>
     <div class="col-sm-6 col-md-4">
         <label for="option-ballSize" class="form-label">ballSize</label>
-        <input type="number" step="any" id="option-ballSize" name="ballSize" value="10" class="form-control form-control-sm">
-        <div class="form-text">Radius of the balls, in pixels</div>
+        <input type="number" step="any" min="0" max="1" id="option-ballSize" name="ballSize" value="0.02" class="form-control form-control-sm">
+        <div class="form-text">Radius of the balls, as a fraction of the blower's width</div>
     </div>
     <div class="col-sm-6 col-md-4">
         <label for="option-density" class="form-label">density</label>
@@ -126,13 +126,13 @@ See the <a href="https://github.com/geoffreycastillo/bingo-blower-js#readme">REA
     </div>
     <div class="col-sm-6 col-md-4">
         <label for="option-targetWidth" class="form-label">targetWidth</label>
-        <input type="number" step="any" id="option-targetWidth" name="targetWidth" value="50" class="form-control form-control-sm">
-        <div class="form-text">Length of each bar of the target cross</div>
+        <input type="number" step="any" min="0" max="1" id="option-targetWidth" name="targetWidth" value="0.1" class="form-control form-control-sm">
+        <div class="form-text">Length of each bar of the target cross, as a fraction of the blower's width</div>
     </div>
     <div class="col-sm-6 col-md-4">
         <label for="option-targetThickness" class="form-label">targetThickness</label>
-        <input type="number" step="any" id="option-targetThickness" name="targetThickness" value="10" class="form-control form-control-sm">
-        <div class="form-text">Thickness of each bar of the target cross</div>
+        <input type="number" step="any" min="0" max="1" id="option-targetThickness" name="targetThickness" value="0.02" class="form-control form-control-sm">
+        <div class="form-text">Thickness of each bar of the target cross, as a fraction of the blower's width</div>
     </div>
     <div class="col-sm-6 col-md-4">
         <label for="option-drawnBallHighlight" class="form-label">drawnBallHighlight</label>
@@ -141,8 +141,8 @@ See the <a href="https://github.com/geoffreycastillo/bingo-blower-js#readme">REA
     </div>
     <div class="col-sm-6 col-md-4">
         <label for="option-drawnBallThickness" class="form-label">drawnBallThickness</label>
-        <input type="number" step="any" id="option-drawnBallThickness" name="drawnBallThickness" value="10" class="form-control form-control-sm">
-        <div class="form-text">Thickness of the circle around the ball drawn</div>
+        <input type="number" step="any" min="0" max="1" id="option-drawnBallThickness" name="drawnBallThickness" value="0.5" class="form-control form-control-sm">
+        <div class="form-text">Thickness of the circle around the ball drawn, as a fraction of the ball's diameter: 1 covers the whole ball</div>
     </div>
     <div class="col-sm-6 col-md-4">
         <label for="option-timeSeconds" class="form-label">timeSeconds</label>
@@ -164,17 +164,17 @@ See the <a href="https://github.com/geoffreycastillo/bingo-blower-js#readme">REA
     </div>
     <div class="col-sm-6 col-md-4">
         <label for="option-edgeBlur" class="form-label">edgeBlur</label>
-        <input type="number" step="any" id="option-edgeBlur" name="edgeBlur" value="60" class="form-control form-control-sm">
-        <div class="form-text">How much the frosted edges are blurred. Only used when frostedEdges is checked</div>
+        <input type="number" step="any" min="0" max="1" id="option-edgeBlur" name="edgeBlur" value="0.12" class="form-control form-control-sm">
+        <div class="form-text">How much the frosted edges are blurred, as a fraction of the blower's width. Only used when frostedEdges is checked</div>
     </div>
     <div class="col-sm-6 col-md-4">
         <label for="option-edgeBand" class="form-label">edgeBand</label>
-        <input type="number" step="any" id="option-edgeBand" name="edgeBand" value="110" class="form-control form-control-sm">
-        <div class="form-text">How far the frosted edges reach into the blower, in pixels. Only used when frostedEdges is checked</div>
+        <input type="number" step="any" min="0" max="1" id="option-edgeBand" name="edgeBand" value="0.44" class="form-control form-control-sm">
+        <div class="form-text">How much of the blower's width is frosted, split equally between both sides: 0.5 frosts a quarter from each side, 1 frosts everything. Only used when frostedEdges is checked</div>
     </div>
     <div class="col-sm-6 col-md-4">
         <label for="option-edgeFrost" class="form-label">edgeFrost</label>
-        <input type="number" step="any" id="option-edgeFrost" name="edgeFrost" value="0.8" class="form-control form-control-sm">
+        <input type="number" step="any" min="0" max="1" id="option-edgeFrost" name="edgeFrost" value="0.8" class="form-control form-control-sm">
         <div class="form-text">How much the frosted edges are washed out to white, from 0 to 1. Only used when frostedEdges is checked</div>
     </div>
     <div class="col-12">
@@ -183,20 +183,20 @@ See the <a href="https://github.com/geoffreycastillo/bingo-blower-js#readme">REA
     </div>
 </form>
 <h1 id="minimal-example">Minimal example</h1>
-<p>HTML:</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">canvas</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;world&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">canvas</span><span style="color:#111">&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">button</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;draw&#34;</span><span style="color:#111">&gt;</span>Draw a ball<span style="color:#111">&lt;/</span><span style="color:#f92672">button</span><span style="color:#111">&gt;</span>
 </span></span><span style="display:flex;"><span>The ball drawn is: <span style="color:#111">&lt;</span><span style="color:#f92672">span</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;result&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">span</span><span style="color:#111">&gt;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">script</span> <span style="color:#75af00">src</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;https://cdn.jsdelivr.net/npm/matter-js@0.20.0/build/matter.min.js&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">script</span><span style="color:#111">&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">script</span> <span style="color:#75af00">src</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;https://cdn.jsdelivr.net/gh/geoffreycastillo/bingo-blower-js@v1.3.0/bingo-blower.min.js&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">script</span><span style="color:#111">&gt;</span>
-</span></span></code></pre></div><p>JS:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#00a8c8">const</span> <span style="color:#75af00">blower</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#75af00">BingoBlower</span><span style="color:#111">();</span>
-</span></span><span style="display:flex;"><span><span style="color:#75af00">blower</span><span style="color:#111">.</span><span style="color:#75af00">addBalls</span><span style="color:#111">([</span><span style="color:#ae81ff">18</span><span style="color:#111">,</span> <span style="color:#ae81ff">6</span><span style="color:#111">,</span> <span style="color:#ae81ff">3</span><span style="color:#111">]);</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">getElementById</span><span style="color:#111">(</span><span style="color:#d88200">&#39;draw&#39;</span><span style="color:#111">).</span><span style="color:#75af00">addEventListener</span><span style="color:#111">(</span><span style="color:#d88200">&#39;click&#39;</span><span style="color:#111">,</span> <span style="color:#00a8c8">async</span> <span style="color:#111">()</span> <span style="color:#111">=&gt;</span> <span style="color:#111">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">const</span> <span style="color:#75af00">draw</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">await</span> <span style="color:#75af00">blower</span><span style="color:#111">.</span><span style="color:#75af00">drawBall</span><span style="color:#111">();</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">getElementById</span><span style="color:#111">(</span><span style="color:#d88200">&#39;result&#39;</span><span style="color:#111">).</span><span style="color:#75af00">textContent</span> <span style="color:#f92672">=</span> <span style="color:#75af00">draw</span><span style="color:#111">.</span><span style="color:#75af00">label</span><span style="color:#111">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">});</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">script</span> <span style="color:#75af00">src</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;https://cdn.jsdelivr.net/gh/geoffreycastillo/bingo-blower-js@v2.0.0/bingo-blower.min.js&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">script</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">script</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">const</span> <span style="color:#75af00">blower</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#75af00">BingoBlower</span><span style="color:#111">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75af00">blower</span><span style="color:#111">.</span><span style="color:#75af00">addBalls</span><span style="color:#111">([</span><span style="color:#ae81ff">18</span><span style="color:#111">,</span> <span style="color:#ae81ff">6</span><span style="color:#111">,</span> <span style="color:#ae81ff">3</span><span style="color:#111">]);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">getElementById</span><span style="color:#111">(</span><span style="color:#d88200">&#39;draw&#39;</span><span style="color:#111">).</span><span style="color:#75af00">addEventListener</span><span style="color:#111">(</span><span style="color:#d88200">&#39;click&#39;</span><span style="color:#111">,</span> <span style="color:#00a8c8">async</span> <span style="color:#111">()</span> <span style="color:#111">=&gt;</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">const</span> <span style="color:#75af00">draw</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">await</span> <span style="color:#75af00">blower</span><span style="color:#111">.</span><span style="color:#75af00">drawBall</span><span style="color:#111">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">getElementById</span><span style="color:#111">(</span><span style="color:#d88200">&#39;result&#39;</span><span style="color:#111">).</span><span style="color:#75af00">textContent</span> <span style="color:#f92672">=</span> <span style="color:#75af00">draw</span><span style="color:#111">.</span><span style="color:#75af00">label</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">});</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">script</span><span style="color:#111">&gt;</span>
 </span></span></code></pre></div>
 </div>
 
@@ -209,7 +209,7 @@ See the <a href="https://github.com/geoffreycastillo/bingo-blower-js#readme">REA
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/matter-js@0.20.0/build/matter.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/geoffreycastillo/bingo-blower-js@v1.3.0/bingo-blower.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/geoffreycastillo/bingo-blower-js@v2.0.0/bingo-blower.min.js"></script>
     
         <script> function readOptions() { const options = {}; for (const input of document.querySelectorAll('#options input')) { if (input.type === 'checkbox') { options[input.name] = input.checked; } else if (input.type === 'number') { options[input.name] = Number(input.value); } else { options[input.name] = input.value; } } return options; }
 function showCounts() { for (const span of document.querySelectorAll('.count')) { span.textContent = counts[span.dataset.colour]; } }
