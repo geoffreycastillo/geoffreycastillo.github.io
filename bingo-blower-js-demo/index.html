@@ -81,7 +81,7 @@ See the <a href="https://github.com/geoffreycastillo/bingo-blower-js#readme">REA
     </div>
     <div class="col-sm-6 col-md-4">
         <label for="option-wallWidth" class="form-label">wallWidth</label>
-        <input type="number" step="any" min="0" max="1" id="option-wallWidth" name="wallWidth" value="0.12" class="form-control form-control-sm">
+        <input type="number" step="any" min="0" max="1" id="option-wallWidth" name="wallWidth" value="0.06" class="form-control form-control-sm">
         <div class="form-text">Thickness of the walls of the blower, as a fraction of the blower's width</div>
     </div>
     <div class="col-sm-6 col-md-4">
@@ -188,7 +188,7 @@ See the <a href="https://github.com/geoffreycastillo/bingo-blower-js#readme">REA
 </span></span><span style="display:flex;"><span>The ball drawn is: <span style="color:#111">&lt;</span><span style="color:#f92672">span</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;result&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">span</span><span style="color:#111">&gt;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">script</span> <span style="color:#75af00">src</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;https://cdn.jsdelivr.net/npm/matter-js@0.20.0/build/matter.min.js&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">script</span><span style="color:#111">&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">script</span> <span style="color:#75af00">src</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;https://cdn.jsdelivr.net/gh/geoffreycastillo/bingo-blower-js@v2.0.0/bingo-blower.min.js&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">script</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">script</span> <span style="color:#75af00">src</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;https://cdn.jsdelivr.net/gh/geoffreycastillo/bingo-blower-js@v3.0.0/bingo-blower.min.js&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">script</span><span style="color:#111">&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">script</span><span style="color:#111">&gt;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">const</span> <span style="color:#75af00">blower</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#75af00">BingoBlower</span><span style="color:#111">();</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75af00">blower</span><span style="color:#111">.</span><span style="color:#75af00">addBalls</span><span style="color:#111">([</span><span style="color:#ae81ff">18</span><span style="color:#111">,</span> <span style="color:#ae81ff">6</span><span style="color:#111">,</span> <span style="color:#ae81ff">3</span><span style="color:#111">]);</span>
@@ -211,7 +211,7 @@ See the <a href="https://github.com/geoffreycastillo/bingo-blower-js#readme">REA
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/matter-js@0.20.0/build/matter.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/geoffreycastillo/bingo-blower-js@v2.0.0/bingo-blower.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/geoffreycastillo/bingo-blower-js@v3.0.0/bingo-blower.min.js"></script>
     
         <script> function readOptions() { const options = {}; for (const input of document.querySelectorAll('#options input')) { if (input.type === 'checkbox') { options[input.name] = input.checked; } else if (input.type === 'number') { options[input.name] = Number(input.value); } else { options[input.name] = input.value; } } return options; }
 function showCounts() { for (const span of document.querySelectorAll('.count')) { span.textContent = counts[span.dataset.colour]; } }
