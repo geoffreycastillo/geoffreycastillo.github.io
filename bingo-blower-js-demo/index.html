@@ -31,13 +31,15 @@ See the <a href="https://github.com/geoffreycastillo/bingo-blower-js#readme">REA
             <button type="button" id="draw" class="btn btn-primary">Draw a ball</button>
             <button type="button" id="reset" class="btn btn-primary">Reset the blower</button>
         </div>
-        <div class="d-flex flex-wrap gap-2 mb-3">
-            <button type="button" id="mouse-on" class="btn btn-outline-secondary">Mouse control on</button>
-            <button type="button" id="mouse-off" class="btn btn-outline-secondary">Mouse control off</button>
-        </div>
-        <div class="d-flex flex-wrap gap-2 mb-3">
-            <button type="button" id="frost-on" class="btn btn-outline-secondary">Frosted edges on</button>
-            <button type="button" id="frost-off" class="btn btn-outline-secondary">Frosted edges off</button>
+        <div class="mb-3">
+            <div class="form-check form-switch">
+                <input type="checkbox" role="switch" id="mouse-control" class="form-check-input">
+                <label for="mouse-control" class="form-check-label">Mouse control</label>
+            </div>
+            <div class="form-check form-switch">
+                <input type="checkbox" role="switch" id="frosted-edges" class="form-check-input">
+                <label for="frosted-edges" class="form-check-label">Frosted edges</label>
+            </div>
         </div>
         <p>The ball drawn is: <span id="result" class="fw-bold"></span></p>
         <h2 class="h5 mt-4">Balls</h2>
@@ -164,7 +166,7 @@ See the <a href="https://github.com/geoffreycastillo/bingo-blower-js#readme">REA
             <input type="checkbox" id="option-frostedEdges" name="frostedEdges" class="form-check-input">
             <label for="option-frostedEdges" class="form-check-label">Start with frosted edges</label>
         </div>
-        <div class="form-text">Blurs the edges of the blower and washes them out to white, so that the balls there cannot be counted, even from a screenshot. The buttons above turn it on and off without rebuilding the blower</div>
+        <div class="form-text">Blurs the edges of the blower and washes them out to white, so that the balls there cannot be counted, even from a screenshot. The switch above turns it on and off without rebuilding the blower</div>
     </div>
     <div class="col-sm-6 col-md-4">
         <label for="option-edgeBlur" class="form-label">edgeBlur</label>
@@ -220,13 +222,14 @@ See the <a href="https://github.com/geoffreycastillo/bingo-blower-js#readme">REA
         <script> function readOptions() { const options = {}; for (const input of document.querySelectorAll('#options input')) { if (input.type === 'checkbox') { options[input.name] = input.checked; } else if (input.type === 'number') { options[input.name] = Number(input.value); } else { options[input.name] = input.value; } } return options; }
 function showCounts() { for (const span of document.querySelectorAll('.count')) { span.textContent = counts[span.dataset.colour]; } }
 function addAllBalls() { const colours = Object.keys(counts); blower.addBalls(colours.map(colour => counts[colour]), colours); }
-function rebuildBlower(event) { event.preventDefault(); blower.destroy(); blower = new BingoBlower(readOptions()); addAllBalls(); document.getElementById('result').textContent = ''; document.getElementById('draw').disabled = false; }
+function syncSwitches() { document.getElementById('mouse-control').checked = false; document.getElementById('mouse-control').disabled = false; document.getElementById('frosted-edges').checked = document.getElementById('option-frostedEdges').checked; }
+function rebuildBlower(event) { event.preventDefault(); blower.destroy(); blower = new BingoBlower(readOptions()); addAllBalls(); syncSwitches(); document.getElementById('result').textContent = ''; document.getElementById('draw').disabled = false; }
 const counts = { Red: 18, MediumBlue: 6, Gold: 3, LimeGreen: 0, Sienna: 0, };
-let blower = new BingoBlower(readOptions()); addAllBalls(); showCounts();
-document.getElementById('draw').addEventListener('click', async () => { document.getElementById('draw').disabled = true; const draw = await blower.drawBall(); if (draw) { document.getElementById('result').textContent = draw.label; } });
-document.getElementById('reset').addEventListener('click', () => { blower.reset(); document.getElementById('result').textContent = ''; document.getElementById('draw').disabled = false; });
-document.getElementById('mouse-on').addEventListener('click', () => blower.addMouseControl()); document.getElementById('mouse-off').addEventListener('click', () => blower.removeMouseControl());
-document.getElementById('frost-on').addEventListener('click', () => blower.addFrostedEdges()); document.getElementById('frost-off').addEventListener('click', () => blower.removeFrostedEdges());
+let blower = new BingoBlower(readOptions()); addAllBalls(); showCounts(); syncSwitches();
+document.getElementById('draw').addEventListener('click', async () => { document.getElementById('draw').disabled = true; document.getElementById('mouse-control').disabled = true; const draw = await blower.drawBall(); if (draw) { document.getElementById('result').textContent = draw.label; } });
+document.getElementById('reset').addEventListener('click', () => { blower.reset(); document.getElementById('result').textContent = ''; document.getElementById('draw').disabled = false; document.getElementById('mouse-control').disabled = false; });
+document.getElementById('mouse-control').addEventListener('change', event => { if (event.target.checked) { blower.addMouseControl(); } else { blower.removeMouseControl(); } });
+document.getElementById('frosted-edges').addEventListener('change', event => { if (event.target.checked) { blower.addFrostedEdges(); } else { blower.removeFrostedEdges(); } });
 for (const button of document.querySelectorAll('.add')) { button.addEventListener('click', () => { blower.addBalls([1], [button.dataset.colour]); counts[button.dataset.colour]++; showCounts(); }); }
 for (const button of document.querySelectorAll('.remove')) { button.addEventListener('click', () => { if (counts[button.dataset.colour] === 0) { return; } blower.removeBalls([1], [button.dataset.colour]); counts[button.dataset.colour]--; showCounts(); }); }
 document.getElementById('options').addEventListener('submit', rebuildBlower);
